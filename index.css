@@ -1,0 +1,83 @@
+* {
+   margin: 0 
+ }
+
+#flexbox
+ {
+    display: flex;
+ }
+
+
+body {
+    background-color: rgba(249, 231, 94, 0.751);
+}
+
+p {
+    color:rgb(0, 0, 0) ;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   color: rgb(0, 0, 0);
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+}
+
+
+
+.right {
+    width: 50%;
+    margin-left: 1px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.left {
+    width: 50%;
+    margin-left: 1px;
+    text-align: center;
+}
+
+li {
+    list-style: none;  
+    margin-top: 10px;
+}
+
+#flexbox a {
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 26, 255);
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 5%;
+    padding: 7px;
+    text-align: center;
+
+}
+
+#flexbox a:hover {
+    background-color:rgb(255, 0, 0);
+}
+
+#flexbox {
+    display: flex;
+    margin-left: 16px;
+    margin-top: 20px;
+}
+
+.linkgithub {
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    padding: 4px;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    margin-left: 40%;
+}
+
+.linkgithub:hover {
+    background-color: rgb(4, 28, 250);
+    color: rgb(255, 0, 0);
+}
