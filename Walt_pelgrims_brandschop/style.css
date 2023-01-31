@@ -1,0 +1,174 @@
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+}
+body {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.search-container {
+  display: flex;
+}
+
+form {
+  display: flex;
+}
+
+input[type="text"] {
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #333;
+  padding: 8px 10px;
+  width: 250px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+
+.cart {
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Promo bar */
+.promo-bar {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* hero section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-image: url(afbeeldingen/AD\ CALVIN\ KLEIN.mp4);
+    width: 100%;
+}
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    text-align: center;
+    color: #333;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.cta-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* product section */
+.product-section {
+    padding: 2rem;
+}
+.product-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+}
+.product {
+    flex-basis: 30%;
+    text-align: center;
+    margin-bottom: 2rem;
+    
+}
+
+img{
+    height: 450px;
+    width: 300px;
+}
+.product img {
+    width: 100%;
+}
+.product h3 {
+    margin-top: 1rem;
+}
+.product p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.product p {
+    margin-bottom: 2rem;
+}
+
+/* icons */
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+footer nav ul {
+    margin: 0;
+}
+footer nav li {
+    margin-right: 1rem;
+}
+footer .social-icons {
+    display: flex;
+}
+footer .social-icons i {
+    font-size: 2rem
