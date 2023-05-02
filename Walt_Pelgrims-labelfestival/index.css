@@ -1,0 +1,137 @@
+/* Globale stijlen */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --bgc-01: hsl(0, 0%, 100%);
+    --bgc-02: hsl(0, 0%, 08%);
+    --txt-01: hsl(0, 87%, 49%);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bgc-01);
+    color: var(--txt-01);
+    font-family: 'Bebas Neue', cursive;
+    line-height: 1;
+}
+
+/* Header stijlen */
+header {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.header__logo img {
+    width: 10rem;
+}
+
+.header__navigation ul {
+    display: flex;
+}
+
+.header__menu-item {
+    list-style: none;
+    margin-right: 16px;
+}
+
+.header__menu-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.header__menu-item a:hover {
+    background-color: #fdfbff;
+    color: #000000;
+}
+
+/* Stijl voor de main sectie */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #f7f7f7;
+}
+
+/* Stijl voor de titel van de line-up */
+.line-up-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Stijl voor de grid-container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Stijl voor de grid-card */
+.grid-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Stijl voor de act afbeelding */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.grid-card {
+    position: relative;
+}
+
+.grid-card:hover {
+    background-color: #adaaaf;
+}
+
+.grid-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.grid-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.grid-card .venue,
+.grid-card .date {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.grid-card .venue {
+    text-transform: uppercase;
+    font-weight: bold;
+}
