@@ -4,7 +4,7 @@
 :root {
     --bgc-01: hsl(0, 0%, 100%);
     --bgc-02: hsl(0, 0%, 08%);
-    --txt-01: hsl(0, 87%, 49%);
+    --txt-01: rgb(235, 15, 15);
 }
 
 * {
@@ -76,8 +76,8 @@ main {
 /* Stijl voor de grid-container */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -134,4 +134,31 @@ main {
 .grid-card .venue {
     text-transform: uppercase;
     font-weight: bold;
+}
+footer {
+  background-color: #050505;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.footer-content p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
