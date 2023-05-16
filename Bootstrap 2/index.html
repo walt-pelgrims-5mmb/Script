@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.rtl.min.css"
+    integrity="sha512-tC3gnye8BsHmrW3eRP3Nrj/bs+CSVUfzkjOlfLNrfvcbKXFxk5+b8dQCZi9rgVFjDudwipXfqEhsKMMgRZGCDw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Voetbalshop</title>
+
+  <style>
+    .custom-style {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+  </style>
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Voetbalwebshop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Producten</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Merk</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Nike</a></li>
+              <li><a class="dropdown-item" href="#">Adidas</a></li>
+              <li><a class="dropdown-item" href="#">Puma</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">SALE</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div class="container">
+    <!-- Eerste rij -->
+    <div class="row">
+      <!-- Kolom 1 -->
+      <div class="col-md-4">
+        <h2>Welkom bij de Voetbalshop!</h2>
+        <p>Al 5 jaar vervullen we hier bij onze voetbalshop jouw kinderdroom, bekend om onze snelle levering en
+          hoogwaardige kwaliteit. Kom binnen en ontdek het assortiment dat jouw voetbalhart sneller doet slaan!</p>
+      </div>
+      <!-- Kolom 2 -->
+      <div class="col-md-4">
+        <img src="afbeeldingen/voetbalschoenen.jpg" alt="voetbalschoenen" class="img-fluid">
+        <button type="button" class="btn btn-primary mt-2">Bestel nu</button>
+      </div>
+      <!-- Kolom 3 -->
+      <div class="col-md-4">
+        <img src="afbeeldingen/voetbalshirt.jpg" alt="voetbalshirts" class="img-fluid">
+        <button type="button" class="btn btn-secondary mt-5">Meer informatie</button>
+      </div>
+    </div>
+
+    <!-- Tweede rij -->
+    <div class="row">
+      <!-- Kolom 1 -->
+      <div class="col-md-4">
+        <img src="afbeeldingen/ballen.jpg" alt="Afbeelding 3" class="img-fluid">
+      </div>
+      <!-- Kolom 2 -->
+      <div class="col-md-4">
+        
+      </div>
+      <!-- Kolom 3 -->
+      <div class="col-md-4">
+        
+      </div>
+    </div>
+
+    <!-- Derde rij met aangepaste CSS-stijlen -->
+    <div class="row">
+      <div class="col">
+        <p class="custom-style">Wij verkopen de hoogst beoordeelde ballen van heel West-Europa, waardoor je kunt
+          genieten van ongeëvenaarde kwaliteit en prestaties op het voetbalveld. </p>
+      </div>
+    </div>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Initialize Bootstrap dropdown
+  var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+  var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+    return new bootstrap.Dropdown(dropdownToggleEl)
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
