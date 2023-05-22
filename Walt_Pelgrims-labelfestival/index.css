@@ -162,3 +162,23 @@ footer {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+/* Globale stijlen */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --bgc-01: hsl(0, 0%, 100%);
+    --bgc-02: hsl(0, 0%, 08%);
+    --txt-01: rgb(235, 15, 15);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bgc-01);
+    color: var(--txt-01);
+    font-family: 'B
