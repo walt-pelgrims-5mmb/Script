@@ -27,7 +27,7 @@
     <main>
         <section class="artist">
             <div class="artist__info">
-                <img src="afbeeldingen/boef.jpg" alt="Boef">
+                <img id="artist__image" src="afbeeldingen/boef.jpg" alt="Boef">
                 <h2 class="artist__name">Boef</h2>
                 <p class="artist__description">Boef is een Nederlandse rapper en songwriter. Hij is bekend van zijn hits zoals "Habiba" en "Treinstation". Boef heeft een unieke stijl en staat bekend om zijn energieke optredens.</p>
                 <p class="artist__genre">Genre: Hiphop</p>
@@ -35,6 +35,30 @@
             </div>
         </section>
     </main>
+    
+    <script>
+        var artistImage = document.getElementById("artist__image");
+    
+        artistImage.addEventListener("click", function() {
+            artistImage.style.display = "none";
+    
+            var artistInfo = document.querySelector(".artist__info");
+            var artistVideo = document.createElement("div");
+            artistVideo.classList.add("artist__video");
+    
+            var videoIframe = document.createElement("iframe");
+            videoIframe.width = "560";
+            videoIframe.height = "315";
+            videoIframe.src = "https://www.youtube.com/watch?v=AshBgnrSvyc";
+            videoIframe.frameborder = "0";
+            videoIframe.allow = "autoplay; encrypted-media";
+            videoIframe.allowfullscreen = true;
+    
+            artistVideo.appendChild(videoIframe);
+            artistInfo.appendChild(artistVideo);
+        });
+    </script>
+    
     <footer>
         <div class="container">
             <div class="footer-content">
