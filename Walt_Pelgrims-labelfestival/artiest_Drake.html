@@ -5,8 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Labelfestival | Artiest</title>
+    <title>Labelfestival | Drake</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+        .artist__info {
+            position: relative;
+        }
+
+        .artist__text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .artist__text-overlay h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .artist__text-overlay p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .artist__video {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,14 +61,44 @@
     <main>
         <section class="artist">
             <div class="artist__info">
-                <img src="afbeeldingen/drake2.jpg" alt="Drake">
-                <h2 class="artist__name">Drake</h2>
-                <p class="artist__description">Drake is een Canadese rapper, zanger en songwriter. Hij is wereldwijd bekend van zijn hits zoals "One Dance" en "God's Plan". Drake is een veelzijdige artiest en heeft invloeden uit verschillende muziekgenres.</p>
-                <p class="artist__genre">Genre: Hiphop, R&B</p>
-                <p class="artist__website"><a href="https://www.drakeofficial.com/" target="_blank">Officiële Website</a></p>
+                <img id="artist__image" src="afbeeldingen/drake2.jpg" alt="Drake">
+                <div class="artist__text-overlay">
+                    <h2 class="artist__name">Drake</h2>
+                    <p class="artist__description">Drake is een Canadese rapper, zanger en songwriter. Hij is wereldwijd bekend van zijn hits zoals "One Dance" en "God's Plan". Drake is een veelzijdige artiest en heeft invloeden uit verschillende muziekgenres.</p>
+                    <p class="artist__genre">Genre: Hiphop, R&amp;B</p>
+                    <p class="artist__website"><a href="https://www.drakeofficial.com/" target="_blank">Officiële Website</a></p>
+                    <button id="watch-video-btn">Bekijk video</button>
+                </div>
             </div>
         </section>
     </main>
+
+    <script>
+        var watchVideoBtn = document.getElementById("watch-video-btn");
+        var artistImage = document.getElementById("artist__image");
+        var artistTextOverlay = document.querySelector(".artist__text-overlay");
+
+        watchVideoBtn.addEventListener("click", function() {
+            artistImage.style.display = "none";
+            artistTextOverlay.classList.add("hide");
+
+            var artistInfo = document.querySelector(".artist__info");
+            var artistVideo = document.createElement("div");
+            artistVideo.classList.add("artist__video");
+
+            var videoIframe = document.createElement("iframe");
+            videoIframe.width = "560";
+            videoIframe.height = "315";
+            videoIframe.src = "https://www.youtube.com/embed/xpVfcZ0ZcFM";
+            videoIframe.frameborder = "0";
+            videoIframe.allow = "autoplay; encrypted-media";
+            videoIframe.allowfullscreen = true;
+
+            artistVideo.appendChild(videoIframe);
+            artistInfo.appendChild(artistVideo);
+        });
+    </script>
+
     <footer>
         <div class="container">
             <div class="footer-content">

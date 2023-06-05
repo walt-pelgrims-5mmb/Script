@@ -7,6 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Labelfestival | Boef</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+        .artist__info {
+            position: relative;
+        }
+
+        .artist__text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .artist__text-overlay h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .artist__text-overlay p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .artist__video {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,24 +62,30 @@
         <section class="artist">
             <div class="artist__info">
                 <img id="artist__image" src="afbeeldingen/boef.jpg" alt="Boef">
-                <h2 class="artist__name">Boef</h2>
-                <p class="artist__description">Boef is een Nederlandse rapper en songwriter. Hij is bekend van zijn hits zoals "Habiba" en "Treinstation". Boef heeft een unieke stijl en staat bekend om zijn energieke optredens.</p>
-                <p class="artist__genre">Genre: Hiphop</p>
-                <p class="artist__website"><a href="https://www.instagram.com/boef/?hl=nl" target="_blank">Officiële Instagram</a></p>
+                <div class="artist__text-overlay">
+                    <h2 class="artist__name">Boef</h2>
+                    <p class="artist__description">Boef is een Nederlandse rapper en songwriter. Hij is bekend van zijn hits zoals "Habiba" en "Treinstation". Boef heeft een unieke stijl en staat bekend om zijn energieke optredens.</p>
+                    <p class="artist__genre">Genre: Hiphop</p>
+                    <p class="artist__website"><a href="https://www.instagram.com/boef/?hl=nl" target="_blank">Officiële Instagram</a></p>
+                    <button id="watch-video-btn">Bekijk video</button>
+                </div>
             </div>
         </section>
     </main>
-    
+
     <script>
+        var watchVideoBtn = document.getElementById("watch-video-btn");
         var artistImage = document.getElementById("artist__image");
-    
-        artistImage.addEventListener("click", function() {
+        var artistTextOverlay = document.querySelector(".artist__text-overlay");
+
+        watchVideoBtn.addEventListener("click", function() {
             artistImage.style.display = "none";
-    
+            artistTextOverlay.classList.add("hide");
+
             var artistInfo = document.querySelector(".artist__info");
             var artistVideo = document.createElement("div");
             artistVideo.classList.add("artist__video");
-    
+
             var videoIframe = document.createElement("iframe");
             videoIframe.width = "560";
             videoIframe.height = "315";
@@ -53,12 +93,12 @@
             videoIframe.frameborder = "0";
             videoIframe.allow = "autoplay; encrypted-media";
             videoIframe.allowfullscreen = true;
-    
+
             artistVideo.appendChild(videoIframe);
             artistInfo.appendChild(artistVideo);
         });
     </script>
-    
+
     <footer>
         <div class="container">
             <div class="footer-content">
