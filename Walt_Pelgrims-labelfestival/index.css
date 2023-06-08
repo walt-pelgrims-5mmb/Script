@@ -316,3 +316,91 @@ main {
 .about__description {
     margin-bottom: 15px;
 }
+/* Hamburger menu */
+.header__menu {
+    display: none;
+}
+
+.header__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f2f2f2;
+}
+
+.header__menu-item {
+    margin: 0 0.5rem;
+}
+
+/* Media query voor het hamburgermenu */
+@media (max-width: 768px) {
+    .header__menu {
+        display: none;
+    }
+
+    .header__navigation {
+        justify-content: flex-end;
+    }
+
+    .header__menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .header__menu-icon span,
+    .header__menu-icon span:before,
+    .header__menu-icon span:after {
+        display: block;
+        background-color: #333;
+        height: 2px;
+        width: 2rem;
+        border-radius: 2px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .header__menu-icon span:before {
+        transform: translateY(-6px);
+    }
+
+    .header__menu-icon span:after {
+        transform: translateY(6px);
+    }
+
+    /* Hamburgermenu weergeven wanneer het pictogram wordt geklikt */
+    .header__menu-checkbox:checked ~ .header__menu {
+        display: block;
+    }
+
+    /* Hamburgermenu-pictogramanimatie */
+    .header__menu-checkbox:checked ~ .header__menu-icon span {
+        background-color: transparent;
+    }
+
+    .header__menu-checkbox:checked ~ .header__menu-icon span:before {
+        transform: translateY(0) rotate(45deg);
+    }
+
+    .header__menu-checkbox:checked ~ .header__menu-icon span:after {
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    /* Hamburgermenu-stijl */
+    .header__menu {
+        display: none;
+        flex-direction: column;
+        background-color: #f2f2f2;
+        padding: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .header__menu-item {
+        margin: 0.5rem 0;
+    }
+}
+
