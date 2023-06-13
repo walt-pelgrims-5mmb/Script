@@ -360,5 +360,13 @@ header label[for="burger"] i {
     }
 }
 
-  
+.header__logo {
+    display: inline-block;
+}
+
+.header__logo img {
+    width: 169px; /* Adjust the width as needed */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+} 
   

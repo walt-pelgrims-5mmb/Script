@@ -7,6 +7,24 @@
     <title>Labelfestival</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes logoAnimation {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+            50% {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+            100% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+        }
+
+        .header__logo img {
+            animation: logoAnimation 5s infinite;
+            transform-style: preserve-3d;
+        }
+    </style>
 </head>
 
 <body>
